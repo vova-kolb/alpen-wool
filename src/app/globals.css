@@ -14,6 +14,10 @@
     --color-alp-accent-soft: var(--alp-accent-soft);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--alp-primary);
     color: var(--alp-text);

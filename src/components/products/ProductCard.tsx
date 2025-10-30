@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import OrderModal from "../ui/OrderModal";
 
 export type Product = {
     id: string;
@@ -14,12 +15,14 @@ export type Product = {
 export default function ProductCard({ product }: { product: Product }) {
     const [index, setIndex] = React.useState(0);
     const total = product.images.length;
+    const [open, setOpen] = React.useState(false);
 
     function go(step: number) {
         setIndex((prev) => (prev + step + total) % total);
     }
 
     return (
+        <>
         <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-alp-primary text-alp-text shadow-[0_6px_24px_-10px_rgba(0,0,0,.6)] transition-all hover:shadow-[0_10px_34px_-12px_rgba(0,0,0,.75)]">
             {/* Image slider */}
             <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -78,8 +81,9 @@ export default function ProductCard({ product }: { product: Product }) {
                 <p className="line-clamp-3 text-sm/6 text-white/80">{product.short}</p>
                 <div className="mt-auto flex gap-3 pt-2">
                     <button
-                        type="button"
-                        className="inline-flex flex-1 items-center justify-center rounded-xl bg-alp-accent px-4 py-2.5 text-sm font-semibold text-alp-primary shadow-[inset_0_-2px_0_rgba(0,0,0,.12)] transition-colors hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-alp-accent/40 cursor-pointer"
+                    type="button"
+                    onClick={() => setOpen(true)}
+                    className="inline-flex flex-1 items-center justify-center rounded-xl bg-alp-accent px-4 py-2.5 text-sm font-semibold text-alp-primary shadow-[inset_0_-2px_0_rgba(0,0,0,.12)] transition-colors hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-alp-accent/40 cursor-pointer"
                     >
                         Order now
                     </button>
@@ -93,5 +97,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 </div>
             </div>
         </div>
+        <OrderModal open={open} onClose={() => setOpen(false)} productTitle={product.title} />
+        </>
     );
 }

@@ -49,7 +49,7 @@ export default function Hero(): JSX.Element {
                                 Shop blankets
                             </a>
                             <a
-                                href="#contact"
+                                href="/contacts"
                                 className="rounded-xl border border-alp-text/30 px-5 py-3 text-sm font-medium text-alp-text transition hover:bg-alp-bg/50"
                             >
                                 Contact us

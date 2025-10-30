@@ -10,7 +10,6 @@ import { seedProducts } from "@/lib/seedData";
  */
 export async function GET() {
   try {
-    // Check if products already exist
     const existingProducts = await getProducts();
     
     if (existingProducts.length > 0) {
@@ -21,7 +20,6 @@ export async function GET() {
       }, { status: 400 });
     }
 
-    // Add each product
     const results = [];
     for (const product of seedProducts) {
       try {

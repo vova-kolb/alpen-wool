@@ -7,7 +7,7 @@ export default function HomeCTA(): JSX.Element {
         <section className="relative overflow-hidden mt-20">
             {/* background image */}
             <Image
-                src="/images/homeCTA_bg.jpg" // place your generated image here
+                src="/images/homeCTA_bg.jpg"
                 alt="Cozy wool blanket and warm light scene"
                 fill
                 priority
@@ -28,18 +28,18 @@ export default function HomeCTA(): JSX.Element {
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
-                    <Link
+                    <a
                         href="#catalog"
                         className="rounded-xl bg-alp-accent px-6 py-3 text-sm font-medium text-[#111] transition hover:bg-alp-accent-soft"
                     >
                         Shop Now
-                    </Link>
-                    <Link
-                        href="#contact"
+                    </a>
+                    <a
+                        href="/contacts"
                         className="rounded-xl border border-alp-accent px-6 py-3 text-sm font-medium text-alp-accent transition hover:bg-alp-accent/10"
                     >
                         Contact Us
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>

@@ -6,7 +6,7 @@ export default function BrandStory() {
             <div className="grid gap-8 md:grid-cols-2 md:items-center">
                 <div className="order-2 md:order-1">
                     <h2 className="text-2xl font-semibold md:text-3xl">Brand Story</h2>
-                    <span className="alp-accent-line mt-3" />
+                    {/* <span className="alp-accent-line mt-3" /> */}
                     <p className="mt-4 text-base leading-relaxed text-white/80">
                         Our journey began with a simple idea — to bring warmth, comfort, and
                         timeless design back into everyday life. We work in small batches,

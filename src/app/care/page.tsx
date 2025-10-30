@@ -22,7 +22,7 @@ export default function CarePage() {
                         <h1 className="text-3xl font-semibold text-[var(--alp-text)] md:text-4xl">
                             Care & Guarantee
                         </h1>
-                        <span className="mt-3 block h-[3px] w-16 rounded-full bg-gradient-to-r from-[var(--alp-accent)] via-[var(--alp-accent-soft)] to-transparent" />
+                        {/* <span className="mt-3 block h-[3px] w-16 rounded-full bg-gradient-to-r from-[var(--alp-accent)] via-[var(--alp-accent-soft)] to-transparent" /> */}
                         <p className="mt-3 text-[color:var(--alp-text)]/80">
                             Wool is a living, breathing fiber. With simple care, your blanket
                             will stay soft, clean, and beautiful for years to come.

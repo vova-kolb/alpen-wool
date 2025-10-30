@@ -36,7 +36,7 @@ export default function ContactPage() {
                 <div className="container -mt-40 pb-10">
                     <div className="max-w-3xl rounded-2xl bg-[var(--alp-primary)]/70 p-6 backdrop-blur-md ring-1 ring-[color:var(--alp-text)]/12 shadow-[0_10px_40px_-20px_rgba(0,0,0,.5)]">
                         <h1 className="text-3xl font-semibold md:text-4xl">Contact</h1>
-                        <span className="mt-3 block h-[3px] w-16 rounded-full bg-gradient-to-r from-[var(--alp-accent)] via-[var(--alp-accent-soft)] to-transparent" />
+                        {/* <span className="mt-3 block h-[3px] w-16 rounded-full bg-gradient-to-r from-[var(--alp-accent)] via-[var(--alp-accent-soft)] to-transparent" /> */}
                         <p className="mt-3 text-[color:var(--alp-text)]/80">
                             Have a question about sizes, care, or custom orders? Send us a message — we’ll get back shortly.
                         </p>

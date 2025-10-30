@@ -20,7 +20,7 @@ export default function ProductGrid({ products }: { products?: Product[] }) {
     }, [products]);
 
     return (
-        <section className="container mx-auto">
+        <section id="catalog" className="container mx-auto">
             <header className="mb-8 flex flex-col gap-2 text-center">
                 <h2 className="text-3xl font-semibold text-alp-text">Our Wool Blankets</h2>
                 <p className="text-sm text-white/70 max-w-2xl mx-auto">
