@@ -1,6 +1,7 @@
 import ProductDetail from "../../../components/products/ProductDetail";
 import { seedProducts } from "@/lib/seedData";
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
     return seedProducts.map((p) => ({ slug: p.slug }));
 }
