@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: isProd ? '/alpen-wool' : '',
+  // Vercel поддерживает полноценный Next.js с серверными функциями
+  // Убрали output: 'export' чтобы работали API routes
   images: {
-    unoptimized: true,
+    // Vercel автоматически оптимизирует изображения через свой CDN
+    // Можно убрать unoptimized, но оставим для совместимости
+    unoptimized: false,
   },
 };
 

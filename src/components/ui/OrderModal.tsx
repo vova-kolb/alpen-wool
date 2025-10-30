@@ -36,7 +36,6 @@ export default function OrderModal({ open, onClose, productTitle }: Props) {
         }
         setError(null);
         // For now we only log the request. Integrate backend later.
-        // eslint-disable-next-line no-console
         console.log("Order request", { productTitle, name, email, phone });
         setSent(true);
         setTimeout(onClose, 1000);
