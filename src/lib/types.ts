@@ -3,13 +3,12 @@ import type { Timestamp } from "firebase/firestore";
 export type ProductImage = { src: string; alt?: string };
 
 export type Product = {
-    id: string;            // firestore doc id (заполняешь из snapshot.id)
+    id: string;
     slug: string;
     title: string;
     short: string;
     images: ProductImage[];
 
-    // optional
     material?: string;
     colors?: [];
     size?: string;
