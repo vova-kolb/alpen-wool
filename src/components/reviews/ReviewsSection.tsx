@@ -18,13 +18,13 @@ export default function ReviewsSection() {
         );
         const unsub = onSnapshot(q, (snap) => {
             const rows: Review[] = snap.docs.map((d) => {
-                const v = d.data() as any;
+                const v = d.data();
                 return {
                     id: d.id,
-                    name: v.name ?? "",
-                    text: v.text ?? "",
-                    avatarUrl: v.avatarUrl ?? null,
-                    createdAt: v.createdAt ?? 0,
+                    name: (v.name as string) ?? "",
+                    text: (v.text as string) ?? "",
+                    avatarUrl: (v.avatarUrl as string | null) ?? null,
+                    createdAt: (v.createdAt as number) ?? 0,
                 };
             });
             setReviews(rows);

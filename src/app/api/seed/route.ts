@@ -27,11 +27,12 @@ export async function GET() {
       try {
         const id = await addProduct(product);
         results.push({ success: true, title: product.title, id });
-      } catch (error: any) {
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "Unknown error";
         results.push({ 
           success: false, 
           title: product.title, 
-          error: error?.message ?? "Unknown error" 
+          error: errorMessage
         });
       }
     }
@@ -43,11 +44,12 @@ export async function GET() {
       message: `Successfully added ${successCount}/${seedProducts.length} products`,
       results,
     });
-  } catch (error: any) {
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json({
       success: false,
       message: "Failed to seed database",
-      error: error?.message ?? "Unknown error",
+      error: errorMessage,
     }, { status: 500 });
   }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Care & Guarantee | Alpen Wool",
@@ -59,12 +60,13 @@ export default function CarePage() {
                     workshop. If you ever receive a piece that does not meet our quality
                     standards, we will repair or replace it free of charge.
                 </p>
-                <div className="mt-8 overflow-hidden rounded-2xl">
-                    <img
+                <div className="mt-8 overflow-hidden rounded-2xl relative h-[600px]">
+                    <Image
                         src="/images/quality_check.jpg"
                         alt="Craftsman checking blanket quality"
-                        className="w-full h-[600px] object-cover transition-transform duration-500 hover:scale-[1.02]"
-                        loading="lazy"
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-[1.02]"
+                        sizes="(max-width: 1200px) 100vw, 1200px"
                     />
                 </div>
             </section>

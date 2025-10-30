@@ -1,3 +1,5 @@
+import type { Timestamp } from "firebase/firestore";
+
 export type ProductImage = { src: string; alt?: string };
 
 export type Product = {
@@ -14,8 +16,8 @@ export type Product = {
     weight?: string;
     isAvailable?: boolean;
 
-    createdAt?: any;       // Firestore Timestamp
-    updatedAt?: any;       // Firestore Timestamp
+    createdAt?: Timestamp;
+    updatedAt?: Timestamp;
 };
 
 
