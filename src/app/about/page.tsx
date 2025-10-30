@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import BrandStory from "@/components/about/BrandStory";
-import Values from "@/components/about/Values";
-import WorkshopGallery from "@/components/about/WorkshopGallery";
+import BrandStory from "../../components/about/BrandStory";
+import Values from "../../components/about/Values";
+import WorkshopGallery from "../../components/about/WorkshopGallery";
 
 export const metadata: Metadata = {
     title: "About | Alpen Wool",

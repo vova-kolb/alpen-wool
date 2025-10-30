@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { addProduct, getProducts } from "@/lib/products";
-import { seedProducts } from "@/lib/seedData";
+import { addProduct, getProducts } from "../../../lib/products";
+import { seedProducts } from "../../../lib/seedData";
 
 /**
  * API route to seed the database with initial products
