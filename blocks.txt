@@ -1,0 +1,46 @@
+Home
+ ├─ Hero Section
+ ├─ Advantages / Key Benefits
+ ├─ Gallery Block
+ └─ Call-to-Action
+
+Product Page
+ ├─ Product Gallery
+ ├─ Description
+ ├─ Features
+ └─ Call-to-Action
+
+Customer Reviews
+ ├─ Review Cards
+ └─ Rating Block
+
+About Us
+ ├─ Brand Story
+ ├─ Values (quality, natural materials, handmade)
+ └─ Visuals / Workshop photos
+
+Care & Guarantee
+ ├─ Care Instructions (washing, storage)
+ ├─ Guarantee of Quality
+ └─ Trust Message ("Handmade with Swiss standards")
+
+Contact
+ ├─ Contact Form
+ ├─ Social Links
+ └─ Location Info
+
+Footer (common to all pages)
+ ├─ Logo / Brand
+ ├─ Navigation (Home, Products, Reviews, About Us, Care & Guarantee, Contact)
+ └─ Social Links
+
+
+
+
+Deep Blue (#1F3A5F or similar) – for a sense of trust and depth
+Earthy Brown (#8B5E3C or similar) – to represent natural materials
+Cappuccino Beige (#D2B48C or similar) – for warmth and softness
+
+Create a one-page selling landing page for handmade wool blankets and throws. The design should evoke warmth, comfort, and authenticity while maintaining a modern, minimalist aesthetic.
+
+The layout should be visually appealing and optimized for mobile and desktop. Use a clean, user-friendly structure with high-quality visuals and intuitive navigation to enhance engagement and trust. Ensure clear calls-to-action that guide users towards making a purchase or contacting the seller.

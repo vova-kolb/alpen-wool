@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+    --alp-primary:      #1B1B2F;
+    --alp-bg:           #162447;
+    --alp-text:         #E4E4E4;
+    --alp-accent:       #FDC500;
+    --alp-accent-soft:  #E8B923;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-alp-primary: var(--alp-primary);
+    --color-alp-bg: var(--alp-bg);
+    --color-alp-text: var(--alp-text);
+    --color-alp-accent: var(--alp-accent);
+    --color-alp-accent-soft: var(--alp-accent-soft);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--alp-primary);
+    color: var(--alp-text);
+    font-family: system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+a[data-active] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+}
+
+select option {
+    color: #000000;
+}
+
+@layer utilities {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 1400px;
+
+    }
+    /* тонкая акцент-линия в палитре */
+    .alp-accent-line {
+        @apply block h-[3px] w-16 rounded-full bg-gradient-to-r
+        from-[var(--alp-accent)] via-[var(--alp-accent-soft)] to-transparent;
+    }
+
+    /* мягкое кольцо/бордер в теме */
+    .ring-alp-soft { @apply ring-1 ring-[color:var(--alp-text)]/12; }
+
+    /* поверхность карточек, чуть плотнее фона */
+    .surface { @apply bg-white/5 backdrop-blur-sm; }
+
+    /* лёгкий «свечащийся» hover в акценте */
+    .hover-accent:hover {
+        box-shadow: 0 10px 40px -18px rgba(253,197,0,.45);
+        outline: 1px solid color-mix(in oklab, var(--alp-accent-soft) 65%, transparent);
+        outline-offset: -1px;
+    }
+
+    /* очень медленный Ken Burns для hero */
+    @keyframes ken {
+        0%,100% { transform: scale(1.02) translateY(0); }
+        50%     { transform: scale(1.06) translateY(-1%); }
+    }
+    .animate-ken { animation: ken 22s ease-in-out infinite; will-change: transform; }
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: var(--alp-accent) !important;
+}
+
+/* трек */
+.reviews-swiper .swiper-scrollbar,
+.reviews-scrollbar {
+    height: 6px;
+    background: color-mix(in oklab, white 12%, transparent);
+    border-radius: 999px;
+}
+
+/* бегунок */
+.reviews-swiper .swiper-scrollbar-drag,
+.reviews-scrollbar .swiper-scrollbar-drag {
+    background: var(--alp-accent, #FDC500);
+    height: 6px;
+    border-radius: 999px;
+    /*box-shadow: 0 0 0 1px color-mix(in oklab, black 10%, transparent) inset;*/
+    transition: background .2s ease, transform .2s ease;
+    box-shadow: 0 0 8px color-mix(in oklab, var(--alp-accent, #FDC500) 30%, transparent);
+}
+
+/* hover/drag эффект */
+.reviews-swiper:hover .swiper-scrollbar-drag,
+.reviews-scrollbar:hover .swiper-scrollbar-drag {
+    transform: translateZ(0) scaleY(1.15);
+    background: color-mix(in oklab, var(--alp-accent, #FDC500) 90%, white 10%);
+}
+
+/* чтобы тени/скейл карточек не резались */
+.reviews-swiper { overflow: visible !important; padding-block: 4px; }
+
