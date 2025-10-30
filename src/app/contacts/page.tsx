@@ -14,8 +14,8 @@ export default function ContactPage() {
 }*/
 
 import type { Metadata } from "next";
-import ContactForm from "@/components/contacts/ContactForm";
-import ContactInfo from "@/components/contacts/ContactInfo";
+import ContactForm from "../../components/contacts/ContactForm";
+import ContactInfo from "../../components/contacts/ContactInfo";
 
 export const metadata: Metadata = {
     title: "Contact | Alpen Wool",
